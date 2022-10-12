@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class test : MonoBehaviour
+{
+    public GameObject red;
+    public GameObject yellow;
+    public GameObject green;
+    SpriteRenderer redSprite;
+    SpriteRenderer yellowSprite;
+    SpriteRenderer greenSprite;
+
+    void Start()
+    {
+        redSprite = red.GetComponent<SpriteRenderer>();
+        yellowSprite = yellow.GetComponent<SpriteRenderer>();
+        greenSprite = green.GetComponent<SpriteRenderer>();
+    }
+
+    void Update()
+    {        
+        if(Input.GetKey("r")){
+            redSprite.color = Color.black;
+        }
+        else {
+            redSprite.color = Color.red;
+        }
+        if(Input.GetKey("y")){
+            yellowSprite.color = Color.black;
+        }
+        else {
+            yellowSprite.color = Color.yellow;
+        }
+        if(Input.GetKey("g")){
+            greenSprite.color = Color.black;
+        }
+        else {
+            greenSprite.color = Color.green;
+        }
+    }
+}
